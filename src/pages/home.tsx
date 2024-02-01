@@ -1,5 +1,5 @@
 import { Button, Container, Paper, Stack, Table, TableBody, TableCell, TableHead, TableRow, TextField, Typography } from "@mui/material"
-import { SetStateAction, useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import { theme } from "../theme"
 import { useLocation } from "react-router-dom"
 
@@ -53,7 +53,7 @@ const Home = () => {
         setWebsite(NonNull(searchParams.get("companyInfo[companyWebsite]")))
         setSiret(NonNull(searchParams.get("companyInfo[companySiret]")))
         setPrice(parseFloat(NonNull(searchParams.get("companyInfo[dealPrice]"))))
-    }, [])
+    }, [searchParams])
 
     console.log(products, 'p')
 
