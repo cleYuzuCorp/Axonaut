@@ -53,7 +53,7 @@ const Home = () => {
         setWebsite(NonNull(searchParams.get("companyInfo[companyWebsite]")))
         setSiret(NonNull(searchParams.get("companyInfo[companySiret]")))
         setPrice(parseFloat(NonNull(searchParams.get("companyInfo[dealPrice]"))))
-    }, [searchParams])
+    }, [])
 
     const handleClick = () => {
         console.log(products, "produits")
