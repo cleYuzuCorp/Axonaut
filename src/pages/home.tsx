@@ -55,11 +55,19 @@ const Home = () => {
         setPrice(parseFloat(NonNull(searchParams.get("companyInfo[dealPrice]"))))
     }, [searchParams])
 
-    console.log(products, 'p')
+    const handleClick = () => {
+        console.log(products, "produits")
+        console.log(transaction, "transactions")
+        console.log(entreprise, "entreprise")
+        console.log(website, "site web")
+        console.log(siret, "siret")
+        console.log(price, "prix")
+        console.log(description, "description")
+    }
 
     return (
         <Container maxWidth="lg">
-            <Stack spacing={8} alignItems="center" marginTop="150px" width="100%">
+            <Stack spacing={8} alignItems="center" marginTop="50px" width="100%">
                 <Typography variant="h1">
                     Axonaut : Définition des factures
                 </Typography>
@@ -157,6 +165,7 @@ const Home = () => {
 
                 <Button
                     variant="contained"
+                    onClick={handleClick}
                     sx={{
                         width: '370px',
                         border: '1px solid #CBD6E2',
