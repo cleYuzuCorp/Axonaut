@@ -113,7 +113,6 @@ const Home = () => {
                             label="Nom"
                             value={transaction}
                             onChange={(e) => setTransaction(e.target.value)}
-                            InputProps={{ readOnly: true }}
                         />
 
                         <TextField
